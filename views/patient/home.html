@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- [Head] start -->
+
+<head>
+  <title>Health Informatics Appointment Booker | Patient Home</title>
+  <!-- [Meta] -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <!-- [Favicon] icon -->
+  <link rel="icon" href="/images/favicon.svg" type="image/x-icon">
+  <!-- [Google Font : Public Sans] icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- [Tabler Icons] https://tablericons.com -->
+  <link rel="stylesheet" href="/fonts/tabler-icons.min.css" >
+  <!-- [Feather Icons] https://feathericons.com -->
+  <link rel="stylesheet" href="/fonts/feather.css" >
+  <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+  <link rel="stylesheet" href="/fonts/fontawesome.css" >
+  <!-- [Material Icons] https://fonts.google.com/icons -->
+  <link rel="stylesheet" href="/fonts/material.css" >
+  <!-- [Template CSS Files] -->
+  <link rel="stylesheet" href="/css/style.css" id="main-style-link" >
+  <link rel="stylesheet" href="/css/style-preset.css" >
+
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body data-pc-preset="preset-1" data-pc-sidebar-theme="dark" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme="light">
+  <!-- [ Pre-loader ] start -->
+<!-- [ Pre-loader ] End -->
+ <!-- [ Sidebar Menu ] start -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="navbar-content">
+      <ul class="pc-navbar">
+        <li class="pc-item pc-caption">
+          <label>Dashboard</label>
+        </li>
+        <li class="pc-item active">
+          <a href="/patient-home/<%= uid %>" class="pc-link">
+            <span class="pc-micon">
+              <i class="ph-duotone ph-gauge"></i>
+            </span>
+            <span class="pc-mtext">Home</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="/appointmenthistory/<%= uid %>" class="pc-link">
+            <span class="pc-micon">
+              <i class="ph-duotone ph-gauge"></i>
+            </span>
+            <span class="pc-mtext">Appointment History</span>
+          </a>
+        </li>
+         <li class="pc-item">
+          <a href="/datasharing/<%= uid %>" class="pc-link">
+            <span class="pc-micon">
+              <i class="ph-duotone ph-gauge"></i>
+            </span>
+            <span class="pc-mtext">Data Sharing Settings</span>
+          </a>
+        </li>
+      </ul>
+    
+
+    </div>
+  </div>
+</nav>
+<!-- [ Sidebar Menu ] end --> <!-- [ Header Topbar ] start -->
+<<header class="pc-header">
+  <div class="header-wrapper"> <!-- [Mobile Media Block] start -->
+<div class="me-auto pc-mob-drp">
+  <ul class="list-unstyled">
+    <!-- ======= Menu collapse Icon ===== -->
+    <li class="pc-h-item pc-sidebar-collapse">
+      <a href="#" class="pc-head-link ms-0" id="sidebar-hide">
+        <i class="ph-duotone ph-list"></i>
+      </a>
+    </li>
+    <li class="pc-h-item pc-sidebar-popup">
+      <a href="#" class="pc-head-link ms-0" id="mobile-collapse">
+        <i class="ph-duotone ph-list"></i>
+      </a>
+    </li>
+
+  </ul>
+</div>
+<!-- [Mobile Media Block end] -->
+<div class="ms-auto">
+  <ul class="list-unstyled">
+   
+    <li class="dropdown pc-h-item">
+      <a
+        class="pc-head-link dropdown-toggle arrow-none me-0"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="false"
+        aria-expanded="false"
+      >
+        <i class="ph-duotone ph-diamonds-four"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+        <a href="/" class="dropdown-item">
+          <i class="ph-duotone ph-power"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </li>
+  
+  </ul>
+</div> </div>
+</header>
+<!-- [ Header ] end -->
+
+
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ breadcrumb ] start -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-sm-auto">
+              <div class="page-header-title">
+                <h5 class="mb-0">Appointment</h5>
+              </div>
+            </div>
+              <div class="col-sm-auto">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../navigation/index.html"><i class="ph-duotone ph-house"></i></a></li>
+                  <li class="breadcrumb-item"><a href="javascript: void(0)">Patient</a></li>
+                  <li class="breadcrumb-item" aria-current="page">Book Appointment</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ breadcrumb ] end -->
+
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="calendar-modal-title f-w-600 text-truncate">Book Appointment</h3>
+              <p id="userlog"></p>
+            </div>
+
+            <div class="card-body">
+              <div class="form-group">
+                <label class="form-label">Doctor</label>
+                <select class="form-control" id="doctors">
+                    
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <label class="form-label">Appointment Date</label>
+                <input type="date" class="form-control" placeholder="Enter Appointment Date" id="date">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Appointment Time</label>
+                <input type="time" class="form-control" placeholder="Enter Appointment Time" id="time">
+                <input type="text" class="form-control" value="<%= uid %>" id="user_id" hidden>
+              </div>
+
+              <div class="form-group">
+                <button  class="btn btn-primary" id="pc-e-venue" onclick="book()">Book</button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <!-- [ sample-page ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+  </div>
+
+
+  <!-- [ Main Content ] end -->
+  <footer class="pc-footer">
+    <div class="footer-wrapper container-fluid">
+      <div class="row">
+        <div class="col my-1">
+          <p class="m-0">Health Informatic Appointment Booker</p>
+        </div>
+        
+      </div>
+    </div>
+  </footer> <!-- Required Js -->
+<script src="/js/plugins/popper.min.js"></script>
+<script src="/js/plugins/simplebar.min.js"></script>
+<script src="/js/plugins/bootstrap.min.js"></script>
+<script src="/js/fonts/custom-font.js"></script>
+<script src="/js/pcoded.js"></script>
+<script src="/js/plugins/feather.min.js"></script>
+<script src="/js/helpers.js?v=0.0.20"></script>
+<script type="text/javascript">
+  window.addEventListener('load', function() {
+     callapi('GET','http://127.0.0.1:3000/all-doctors','','all-doctors')
+})
+</script>
+
+
+  
+</body>
+<!-- [Body] end -->
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- [Head] start -->
+
+<head>
+  <title>Health Informatics Appointment Booker | Register</title>
+  <!-- [Meta] -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  
+  <!-- [Favicon] icon -->
+  <link rel="icon" href="/images/favicon.svg" type="image/x-icon"> <!-- [Google Font : Public Sans] icon -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- [Tabler Icons] https://tablericons.com -->
+<link rel="stylesheet" href="/fonts/tabler-icons.min.css" >
+<!-- [Feather Icons] https://feathericons.com -->
+<link rel="stylesheet" href="/fonts/feather.css" >
+<!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+<link rel="stylesheet" href="/fonts/fontawesome.css" >
+<!-- [Material Icons] https://fonts.google.com/icons -->
+<link rel="stylesheet" href="/fonts/material.css" >
+<!-- [Template CSS Files] -->
+<link rel="stylesheet" href="/css/style.css" id="main-style-link" >
+<link rel="stylesheet" href="/css/style-preset.css" >
+
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body data-pc-preset="preset-1" data-pc-sidebar-theme="dark" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme="light">
+
+  <div class="auth-main v1">
+    <div class="bg-overlay bg-white"></div>
+    <div class="auth-wrapper">
+      <div class="auth-form">
+        <div class="card mb-5 mt-3">
+          <div class="card-header bg-dark">
+            <h4 class="text-center text-white mb-0 f-w-500">Sign up with your Email.</h4>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <p id="userlog"></p>
+              <div class="col-sm-6">
+                <div class="form-group mb-3">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" placeholder="First Name" id="first_name">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group mb-3">
+                   <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Last Name" id="last_name">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group mb-3">
+                  <label class="form-label">Age</label>
+                  <input type="text" class="form-control" placeholder="Age" id="age">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group mb-3">
+                  <label class="form-label">Location</label>
+                  <input type="text" class="form-control" placeholder="Location" id="location">
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label">Gender</label>
+              <select class="form-select" id="gender">
+                <option value="empty" selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="Email Address" id="email">
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" placeholder="Password" id="password">
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" placeholder="Confirm Password" id="confirm">
+            </div>
+            
+
+
+            <div class="d-grid mt-4">
+              <button type="button" class="btn btn-primary" onclick="register()">Register</button>
+            </div>
+          </div>
+          <div class="card-footer border-top">
+            <div class="d-flex justify-content-between align-items-end">
+              <div>
+                <h6 class="f-w-500 mb-0">Already have an Account?</h6>
+                <a href="/" class="link-primary">Login</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+  <!-- Required Js -->
+  <script src="/js/plugins/popper.min.js"></script>
+  <script src="/js/plugins/simplebar.min.js"></script>
+  <script src="/js/plugins/bootstrap.min.js"></script>
+  <script src="/js/fonts/custom-font.js"></script>
+  <script src="/js/pcoded.js"></script>
+  <script src="/js/plugins/feather.min.js"></script>
+  <script src="/js/helpers.js?v=0.0.2"></script>
+
+  
+  
+  
+
+
+</body>
+<!-- [Body] end -->
+
+</html>
